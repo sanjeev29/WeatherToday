@@ -29,10 +29,13 @@ $(document).ready(function() {
                 $(".description").html(response['description']);
                 $(".sunrise").html("sunrise at: " + response['sunrise']);
                 $(".sunset").html("sunset at: " + response['sunset']);
-                $(".humidity").html("Humidty: " + response['humidity']);
-                $(".pressure").html("Pressure:" + response['pressure']);
-                $(".windspeed").html("Wind Speed: " + response['wind_speed']);
+                $(".humidity").html("Humidty: " + response['humidity']+"%");
+                $(".pressure").html("Pressure:" + response['pressure']+" hPa");
+                $(".windspeed").html("Wind Speed: " + response['wind_speed']+" m/s");
                 $("img").attr('src', "https://openweathermap.org/img/w/" + response['icon'] + ".png");
+                $(".tmax").html("Max temperature: " + response['temp_max']+"°");
+                $(".tmin").html("Min temperature: " + response['temp_min']+"°");
+                $(".main").html(response['main']);
             }
         });
     }

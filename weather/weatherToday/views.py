@@ -23,6 +23,7 @@ def ajaxer(request):
 			'city': city_weather['name'],
 			'country': city_weather['sys']['country'],
 			'temperature': city_weather['main']['temp'],
+			'main': city_weather['weather'][0]['main'],
 			'description': city_weather['weather'][0]['description'],
 			'icon': city_weather['weather'][0]['icon'],
 			'humidity': city_weather['main']['humidity'],
@@ -30,6 +31,8 @@ def ajaxer(request):
 			'sunrise': time_converter(city_weather['sys']['sunrise']),
 			'sunset': time_converter(city_weather['sys']['sunset']),
 			'wind_speed': city_weather['wind']['speed'],
+			'temp_max': city_weather['main']['temp_max'],
+			'temp_min': city_weather['main']['temp_min']
 	}
 	#pprint(weather)
 	#return HttpResponse()
