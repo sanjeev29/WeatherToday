@@ -1,0 +1,16 @@
+certifi==2018.4.16
+chardet==3.0.4
+Click==7.0
+decorator==4.3.0
+Django==2.0.7
+future==0.16.0
+geocoder==1.38.1
+idna==2.7
+opencage==1.1.4
+pprint==0.1
+pygeocoder==1.2.5
+pytz==2018.5
+ratelim==0.1.6
+requests==2.19.1
+six==1.11.0
+urllib3==1.23
