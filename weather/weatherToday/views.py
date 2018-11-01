@@ -14,7 +14,7 @@ def ajaxer(request):
 	if request.is_ajax:
 		latitude = request.GET.get('Latitude')
 		longitude = request.GET.get('Longitude')
-		result = geocoder.opencage([latitude, longitude], key='fdb8ae4a92ae4eebab0ec5a9a2c85e0b', method='reverse')
+		result = geocoder.opencage([latitude, longitude], key='', method='reverse') #enter your API key
 		#print(result.city, result.state, result.country)
 		url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=f009f5c6a0f7ab4448e65aa4b5f3f0c5'
 		city_weather = requests.get(url.format(result.city)).json()
